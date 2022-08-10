@@ -1,0 +1,54 @@
+{%extends 'mainapp/base.html'%}
+{%load static%}
+{%block content%}
+<link rel="stylesheet" href="{%static 'mainapp/css/other.css'%}">
+  
+    <main>
+    
+    <!-------------- Hero Section --------->
+    
+    <div class="hero-other">
+            <div class="container">
+                <p><i class="fa fa-home"></i> <a href="index-2.html">Home</a> <span> | </span> <span>Contact us</span></p>
+            </div>
+        </div>
+     <!------------- Contact section ---------------->
+    
+     <div class="contact">
+        <div class="container">
+            <div class="left">
+                <h1>Get in Touch</h1>
+                <p id="message-response" style="text-align:center; font-weight:bold;"> </p>
+                <form action = "{%url 'contact'%}" id="message-form" method="post">
+                    <input type="text" name="name" required class="text-input" placeholder="Enter fullname" id="message-fullname">
+                    <input type="email" name="email"required class="text-input" placeholder="Enter email" id="message-email">
+                    <input type="text" name="phone"required class="text-input" placeholder="Enter Phone Number" id="message-email">
+                    {%csrf_token%}
+                    <input type="text" name="subject" required class="text-input" placeholder="Enter Subject" >
+                    <textarea name="message" required placeholder="Your message..." cols="30" rows="10" id="message-message"></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+
+                
+            </div>
+
+            <div class="right">
+                <h1>Contact Info</h1>
+                
+                <p><i class="fa fa-envelope"></i> support@hftm.com </p>
+                <p><i class="fa fa-map-marker"></i> Head Office: Malta.</p>
+                <p>
+                    <a href="#" id="whatsapp"><i class="fa fa-whatsapp"></i></a>
+                    <a href="#" id="twitter"><i class="fa fa-telegram"></i></a>
+                    <a href="#" id="facebook"><i class="fa fa-facebook"></i></a>
+                    <a href="#" id="twitter"><i class="fa fa-twitter"></i></a>
+                    <a href="#" id="google-plus"><i class="fa fa-google-plus"></i></a>
+                </p>
+            </div>
+        </div>
+    </div>
+    
+
+        
+    </main>
+    {%endblock content%}

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{%static 'mainapp/img/logoalone.png'%}" type="image/x-icon">
+    <title>Binance High frequency Mining</title>
+
+    <link rel="stylesheet" href="{%static 'mainapp/cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'%}"/>
+    <link rel="stylesheet" href="{%static 'mainapp/maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css'%}" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="{%static 'mainapp/cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css'%}"/>
+
+    <script src="{%static 'mainapp/code.jquery.com/jquery-3.2.1.slim.min.js'%}" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="{%static 'mainapp/cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js'%}" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="{%static 'mainapp/maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js'%}" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&amp;family=Roboto+Condensed:wght@400&amp;family=Source+Sans+Pro:wght@300&amp;display=swap" rel="stylesheet">  
+    <script src="{%static 'mainapp/kit.fontawesome.com/27416b154a.js'%}" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="{%static 'mainapp/css/style.css'%}">
+    <link rel="stylesheet" href="{%static 'mainapp/css/footer.css'%}">
+    <link rel="stylesheet" href="{%static 'mainapp/css/hero.css'%}">
+    <link rel="stylesheet" href="{%static 'mainapp/css/main.css'%}">
+    <link rel="stylesheet" href="{%static 'mainapp/css/blog.css'%}">
+    <link rel="stylesheet" href="{%static 'mainapp/css/package.css'%}">
+
+    <link rel="stylesheet" href="{%static 'mainapp/css/oabout.css'%}">
+</head>
+<body>
+    <div id="preloader" style="display: none">
+        <div id="status" style="display: inherit;">&nbsp; <span> Loading...</span></div>
+    
+    </div>
+
+    <script src="{%static 'mainapp/js/load.js'%}"></script>
+    <header class="sticky">
+        <div id="toggle-sidebar" onclick="togglesidebar()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <nav>
+            <ul>
+                <li class="nav-item active"> <a href="{%url 'home'%}"><span>Home</span></a></li>
+                <li class="nav-item active"> <a href="{%url 'news'%}"><span>News</span></a></li>
+                <li class="nav-item active"> <a href="{%url 'testimonial'%}"><span>Testimonial</span></a></li>
+                <li class="nav-item"> <a href="{%url 'contact'%}"><span>Contact</span>
+            
+            
+                <li class="nav-item">
+                    <span>Account</span>
+        
+                    <i class="fa fa-angle-down"></i>
+                    <ul class="dropdown">
+                    {%if request.user.is_authenticated%}
+                    <li><a href="{%url 'profile'%}">Profile</a></li>
+                    <li><a href="{%url 'logout'%}">Logout</a></li>
+                    {%else%}
+                    <li><a href="register/signup.html">Register</a></li>
+                    <li><a href="register/signin.html">Login</a></li>
+                    {%endif%}
+                    </ul>
+                </li>
+
+                <a><i class="fa fa-search search-btn inline-search"></i></a>
+                {%if request.user.is_authenticated%}
+                <li><a href="{%url 'logout'%}">{{request.user.username}}</a></li>
+                {%else%}
+                <li><a href="{%url 'login'%}">Login</a></li>
+                {%endif%}            </ul>
+        </nav>
+
+        <a><i class="fa fa-search search-btn"></i></a>
+    </header>
+
+    <div class="search-form">
+        <form action="#" method="post">
+            <input type="text" name="search_term"  placeholder="Search..." id="searcher">
+        </form>
+    </div>
+    {% if messages %}
+
+    {% for message in messages %}
+        <div class = "alert alert-{{ message.tags }} fa fa-envelope">
+          {{message}}
+        </div>
+    {%endfor%}
+    {% endif %}
+
+    {%block content%}
+    {%endblock content%}
+    
+
+    <footer>
+        <div class="container">
+            <div class="box one">
+                <h2> High Frequecy Trading and Mining</h2>
+                <p>
+                    Binance High frequency Mining  provides you an opportunity to convert your dreams into reality.<br><br>
+
+                Our 24/7 online customer support, our reliable and easy accessible web interface have made customer services better. We inspire confidence in finance. Stay with us. </p>
+                </p>
+            </div>
+            
+            <div class="box two">
+                <h2>Data Protection</h2>
+                <p>
+                    All personal data which you provide the company are stored in an environment of strict confidentiality and are protected by the Law on protection of personal data.
+                </p>
+            </div>
+            
+            <div class="box three">
+                <h2>Quick Links</h2>
+                <div class="content">
+                    <ul>
+                        <li><a href="{%url 'register'%}"><i class="fas fa-angle-double-right"></i> Register</a></li>
+                        <li><a href="{%url 'login'%}"><i class="fas fa-angle-double-right"></i> Login</a></li>
+                        <li><a href="{%url 'terms'%}"><i class="fas fa-angle-double-right"></i> Our Terms</a></li>
+                    </ul>
+                    
+                </div>
+            </div>
+            
+            <div class="box four">
+                <h2>Contact Us</h2>
+                <p>
+                    <a style="display: inline;" href="#"><i style="color:white" class="fa fa-whatsapp"></i> </a> <a style="display: inline;" href="#"><i style="color:white" class="fa fa-telegram"></i> </a>
+                    
+
+                    <a href="mailto:support@Binance High frequency Mining.com"><i class="fas fa-envelope"></i> support@Binance High frequency Mining.com</a>
+                    <a href="#"><i class="fas fa-map-marker-alt"></i> Head Office: Malta. </a>
+                    
+                    <a id="google_translate_element"></a>
+
+                    <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+                    }
+                    </script>
+
+                    <script type="text/javascript" src="{%static 'mainapp/translate.google.com/translate_a/elementa0d8.js?cb=googleTranslateElementInit'%}"></script>
+                
+                </p>
+            </div>
+            
+        </div>
+        
+        <div class="bottom">
+            Copyright &copy; 2021  Binance High frequency MiningM.. All rights reserved.
+        </div>
+    
+    </footer>
+
+    <script src="{%static 'mainapp/js/scroll-out.js'%}"></script>
+    <script> ScrollOut({
+            targets: ".about-content, .about-image"
+        }); 
+    </script>
+
+    <script src="{%static 'mainapp/js/ajax.js'%}"></script>
+    <script src="{%static 'mainapp/js/calculator.js'%}"></script>
+    <script src="{%static 'mainapp/js/main.js'%}"></script>
+    <script src="{%static 'mainapp/js/load.js'%}"></script>
+    <script src="{%static 'mainapp/js/toggle.js'%}"></script>
+    <script src="{%static 'mainapp/js/carousel.js'%}"></script>
+    
+    <script src="{%static 'mainapp/js/validate.js'%}"></script>
+    <script src="{%static 'mainapp/ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'%}"></script>
+    <script type="text/javascript" src="{%static 'mainapp/cdn.jsdelivr.net/npm/slick-carousel%401.8.1/slick/slick.min.js'%}"></script>
+    <script src="{%static 'mainapp/stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js'%}"></script>
+    <script src="{%static 'mainapp/js/sub.js'%}"></script>
+
+</body>
+</html>

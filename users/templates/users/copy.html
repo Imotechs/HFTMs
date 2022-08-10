@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+{%load static%}
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>HFTM - Address</title>
+    <link rel="stylesheet" href="{%static 'users/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css'%}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+
+<body style="margin:0px; background: #f8f8f8; ">
+    <div width="100%" style="background: #f8f8f8; padding: 0px 0px; 
+        font-family:arial; line-height:28px; 
+        height:100%;  width: 100%; color: #514d6a;">
+        <div style="max-width: 700px; padding:50px 0;  margin: 0px auto; font-size: 14px">
+            
+            <table border="0" cellpadding="0" cellspacing="0" style="width: 100%;">
+                <tbody>
+                    <tr>
+                        <td style="background:#36bea6; padding:20px; color:#fff; "> 
+                            <ol>
+                                <li>Copy the wallet address below</li>
+                                <li>Go to your crypto wallet and make a transfer of the confirmed deposit amount to start your trade.</li>
+                                <li>Use the "Upload" Button on your dashboard to upload your Transaction Screenshot</li>
+                            </0l>
+                            
+                         </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div style="padding: 40px; background: #fff;">
+                <table border="0" cellpadding="0" cellspacing="0" style="width: 100%;">
+                    <tbody>
+                        <p> Click the Icon bellow to copy the Wallet Address</p>
+                        <tr>
+                            <td><b>Wallet Address</b>
+                                <div style="display: flex;">
+                                    <p id="p1" style="margin-top:0px;">XHFY45KJK4092484KJ48</p>
+                                    <i 
+                                        style="margin-left: 5px; 
+                                        cursor: pointer; 
+                                        padding-top: 7px;
+                                        font-weight: 700;" 
+                                        class="fa fa-copy" onclick="copyToClipboard('#p1')">
+                                    </i> 
+                                    <b id="copied" style="display: none; margin-left: 5px;">Copied!</b>
+                                </div>
+
+                                <script>
+                                    function copyToClipboard(element) {
+                                    var $temp = $("<input>");
+                                    $("body").append($temp);
+                                    $temp.val($(element).text()).select();
+                                    document.execCommand("copy");
+                                    $temp.remove();
+
+                                    var copy = document.getElementById('copied')
+                                    copy.style.display = "block";
+                                    }
+                                </script>
+
+                            </td>
+                            <td align="right" width="100"> <script>
+                                date = new Date().toLocaleDateString();
+                                document.write(date);
+                            </script> </td>
+                        </tr>
+                        
+                        <tr>
+
+                            <td colspan="2">
+                                <center>
+                                    <form method="post">
+                                        {%csrf_token%}
+                                    <button type="submit" style="display: inline-block; padding: 11px 30px; margin: 20px 0px 30px; font-size: 15px; color: #fff; background: #2962FF; border-radius: 60px; text-decoration:none;">Submit</button>
+                                    </form>
+                                </center>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div style="text-align: center; font-size: 12px; color: #b2b2b5; margin-top: 20px">
+                <p> HFTM
+                    </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

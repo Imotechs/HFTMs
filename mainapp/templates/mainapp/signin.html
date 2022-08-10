@@ -1,0 +1,51 @@
+{%extends 'mainapp/base.html'%}
+{%load static%}
+{%block content%}
+<link rel="stylesheet" href="{%static 'mainapp/css/other.css'%}">
+<link rel="stylesheet" href="{%static 'mainapp/cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css'%}"/>
+<link rel="stylesheet" href="{%static 'mainapp/css/form.css'%}">     
+<main>
+
+    <div class="form">
+           <div class="container">
+                
+
+                <form  method="POST" style="margin-top: 120px;">
+                    <!-- <h2>Sign in to your account</h2> -->
+                    
+                    <!-- <p style="color: red;">{{msg}}</p> -->
+                    {%for key,message in msg.items%}
+                    <p>{{key}}<b style="color:red;">&nbsp; :{{message}}</b></p> 
+                   {%endfor%}
+                    <br> <br>
+                    {%csrf_token%}
+                    <span>Username Or Email</span>
+                    <div>
+                        <i class="fa fa-user"></i>
+                        <input id="l_user" type="text" name="username" placeholder="Username or Email" value="" oninput="checkLength(this)">
+                        <label id="l_user_2" for=""></label>
+                    </div>
+
+                    <span>Password</span>
+                    <div>
+                        <i class="fa fa-lock"></i>
+                        <input id = "pass" type="password" placeholder="Password" name="password" oninput="checkLength(this)">
+                        <label id ="l_pass" for=""></label>
+                    </div>
+
+                    <div>
+                        <button type="submit" name="sign_in" class="btn"> Login</button>
+                    </div>
+
+                    <p class="">New to B_HFT system? <a href="{%url 'register'%}">Sign up</a></p>
+                    
+                    <div style="font-size: 0.8em; text-align:center;"><a href="{%url 'password_reset'%}"> forgot password?</a></div>
+
+                </form>
+           </div>
+           
+           <div class="right"></div>
+       </div>
+
+    </main>
+    {%endblock content%}

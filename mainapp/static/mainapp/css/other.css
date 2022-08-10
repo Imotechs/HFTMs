@@ -1,0 +1,214 @@
+#hero{
+    position: relative;
+}
+
+
+.hero-other{
+    background-image: url(../img/image1.jpg);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    height: 300px;
+    position: relative;
+    padding: 50px;
+}
+
+.hero-other .container p{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero-other .container p *{
+    color: white;
+}
+
+.terms{
+    background-color: white;
+    line-height: 1.5;
+}
+
+.terms .container{
+    width: 95vw;
+    max-width: 1250px;
+    margin: auto;
+    padding: 50px 0px;
+}
+
+.terms h2{
+    margin: 20px 0px;
+}
+
+.faqs{
+    background-color: white;
+    line-height: 1.5;
+}
+
+.faqs .container{
+    width: 95vw;
+    max-width: 1250px;
+    margin: auto;
+    padding: 50px 0px;
+}
+
+.faqs h2{
+    margin: 20px 0px;
+}
+
+.faqs ul{
+    padding: 10px;
+}
+
+.faqs li{
+    list-style: none;
+}
+
+.faqs li a{
+    display: block;
+    color: white;
+    background-color: #205aac;
+    width: 85vw;
+    max-width: 600px;
+    padding: 15px 20px;
+    position: relative;
+    margin: 20px 0px 0px 0px;
+    color: white;
+    cursor: pointer;
+}
+
+.faqs a:not([href]):not([tabindex]) {
+    color: white;
+    text-decoration: none;
+}
+
+
+.faqs p{
+    width: 85vw;
+    max-width: 600px;
+    padding: 15px 20px;
+    background-color:white;
+    margin: 0px;
+}
+
+#faqs p {display: none;}
+#faqs p:first-of-type {display: block;}
+
+
+.contact h1{
+    margin: 20px 0px;
+    text-align: center;
+}
+
+.contact .container{
+    display: flex;
+    width: 95vw;
+    max-width: 1250px;
+    margin: 40px auto;
+}
+
+.contact .container .left{
+    flex: 1;
+}
+
+.contact .container .left .text-input,
+.contact .container .left textarea{
+    display: block;
+    width: 80%;
+    margin:  10px auto;
+    padding: 15px 20px;
+    border-radius: 3px;
+    border: 1px solid green;
+    color: green;
+}
+
+.contact .container .left button{
+    display: block;
+    width: max-content;
+    margin:  10px auto;
+    padding: 15px 20px;
+    border-radius: 5px;
+    background-color: white;
+    border: 1px solid green;
+    color: green;
+}
+
+.contact .container .left button:hover{
+    background-color: green;
+    color: white;
+}
+
+.contact .container .right{
+    flex: 1;
+}
+
+.contact .container .right p{
+    padding: 20px 20px;
+}
+
+.contact .container .right a{
+    width: 45px;
+    height: 45px;
+    padding-top: 10px;
+    margin-right: 5px;
+    text-align: center;
+    font-size: 1.3em;
+    border-radius: 50%;
+    display: inline-block;
+    transition: all 0.3s;
+    color: white;
+}
+
+#message-reponse{
+    text-align: center;
+    width: 100%;
+}
+
+@media only screen and (max-width:800px){
+
+    .terms .container{
+        width: 90vw;
+    }
+
+    .contact .container{
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width:450px){
+
+    .hero-other{
+        height: 200px;
+    }
+}
+
+
+#facebook{
+    background: #3B5998;
+     transition: 500ms;
+}
+
+#twitter{
+    background: #55ACEE;
+    transition: 500ms;
+}
+
+#linkedin{
+    background: #0077B5;
+    transition: 500ms;
+}
+
+#whatsapp{
+    background: #25D366;
+    transition: 500ms;
+}
+
+#instagram{
+    background: #5851db;
+    transition: 500ms;
+}
+
+#google-plus{
+    background: red;
+    transition: 500ms;
+}

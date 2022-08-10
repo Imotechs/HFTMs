@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    {%load static%}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First man counter racing</title>
+    <link rel="stylesheet" href="{%static 'users/games/style.css'%}">
+</head>
+<body>
+    <main class="game" style="padding-top: 20px;">
+        
+        <header>
+          <h1 class="heading js-heading">counter racing</h1>
+        </header> <hr>
+    
+
+        <div class="container" style="padding-top: 40px;">
+            <h3 class="balance">Account ${{request.user.account.main}}</h3>
+            <input type="number" class="form-control" id="amount" placeholder="$" required>
+        <p id = "csrf">{%csrf_token%}</p>
+        </div>
+        <div class="card__header" id="inst" style="margin:0px 30px 0px 30px">
+            <h4 class="card__header_title">Instructions: </h4>
+            <span class="card__header_subtitle">
+            <ol>
+              <li>Each round requires an amount, enter an amount to start</li>
+              <li>Wait for the computer to tap a color and follow its taps</li>
+              <li>Tap successfully to the last round to get 50% of your amount</li>
+            </ol>  
+            </span>
+        </div>
+        <section class="tile-container js-container unclickable">
+          <div class="tile tile-red" data-tile="red"></div>
+          <div class="tile tile-green" data-tile="green"></div>
+          <div class="tile tile-blue" data-tile="blue"></div>
+          <div class="tile tile-yellow" data-tile="yellow"></div>
+        </section>
+      
+        <footer class="info-section">
+          <button class="start-button js-start">Start</button>
+          <span class="info js-info hidden"></span>
+        </footer>
+    </main>
+      
+    <div class="hidden">
+    <audio
+        src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3"
+        data-sound="red"
+    ></audio>
+    <audio
+        src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3"
+        data-sound="green"
+    ></audio>
+    <audio
+        src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3"
+        data-sound="blue"
+    ></audio>
+    <audio
+        src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3"
+        data-sound="yellow"
+    ></audio>
+    </div>
+
+    <script src="{%static 'users/games/main.js'%}"></script>
+</body>
+</html>

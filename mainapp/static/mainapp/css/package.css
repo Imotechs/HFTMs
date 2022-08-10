@@ -1,0 +1,205 @@
+.package{
+    height: inherit;
+    padding: 40px 60px;
+    background: white;
+    
+}
+
+.package h1{
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.package h2{
+    max-width: 900px;
+    text-align: center;
+    margin: 0px auto;
+}
+
+.package .container{
+    display: flex;
+    justify-content: center;
+}
+
+.package .container .box{
+    flex: 1;
+    margin: 10px;
+    background-color: white;
+    box-shadow: 0px 2px 20px 5px #d6dee0;
+    text-align: center;
+    padding: 0px 0px 0px 0px;
+    line-height: 1.5;
+    letter-spacing: 0.7px;
+    border-radius: 5px;
+}
+
+.package .container h2{
+    font-size: 20px;
+    margin: 0px 0px 10px 0px;
+    font-weight: bold;
+    padding: 20px 20px;
+    background: #c19740;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    color: white;
+    text-transform: uppercase;
+}
+
+.package .container h2 span{
+    display: block;
+    font-size: 1.3em;
+    border-top: 1px solid white;
+    margin-top: 20px
+}
+
+.package .container h2 span:last-child{
+    text-transform: none;
+    font-size: .7em;
+    border-top: 0px;
+    margin-top: 10px;
+}
+
+.package .container .box p{
+    border-top: 1px solid #eaeaea;
+    padding: 10px;
+}
+ 
+.package .container .box a{
+    display: block;
+    margin: 10px auto;
+    padding: 10px 30px;
+    width: max-content;
+    border-radius: 3px;
+    background: #c19740;
+    color: white;
+    font-size: .9em;
+}
+
+.package .checked{
+    color: orange;
+}
+
+
+@media only screen and (max-width:750px){
+    .package{
+        padding: 20px 40px;
+    }
+    
+}
+
+@media only screen and (max-width:700px){
+    .package{
+        padding: 40px 60px;
+    }
+    
+    .package .container{
+        flex-direction: column;
+        padding: 0px;
+    }
+    
+    .package h1{
+        font-size: 1.3em;
+    }
+    
+    .package .container .box{
+        margin: 10px auto;
+        width: 100%;
+        min-width: 250px;
+    }
+
+    .package .container .box p{
+        font-size: .9em;
+    }
+}
+
+@media only screen and (max-width:450px){
+    
+    .package{
+        padding: 40px 20px;
+    }
+    
+    .package .box{
+        margin: 0px;
+        margin-bottom: 10px;
+    }
+    
+    .package h1{
+        font-size: 20px;
+    }
+}
+
+
+
+
+.calculator{
+    background-image: url(../img/calculator.jpg);
+    min-height: 600px;
+    width:100%;
+    margin: 0px 0px 40px 0px;
+    color: white;
+    font-family: 'Roboto condensed';
+}
+
+.calculator .container{
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 80px 0px;
+    display: block;
+}
+
+.calculator .container h2, .calculator .container h3{
+    margin:5px 0px;
+}
+
+.calculator .container p{
+    margin: 0px;
+    line-height: 2;
+}
+
+.calculator .container p:first-of-type{
+    color: #daa106;
+}
+
+.calculator h3{
+    font-weight: normal;
+    color: rgb(250, 250, 250, 0.5);
+}
+
+.calculator ::placeholder{
+    color: black;
+}
+
+.calculator input, 
+.calculator select{
+    display: block;
+    margin: 15px 0px;
+    padding: 15px;
+    width: 100%;
+    max-width:400px;
+    border: 0px;
+    border-radius: 3px;
+    background-color: white;
+}
+
+.calculator input:focus, .calculator select:focus{
+    outline: none;
+}
+
+
+.calculator .field{
+    display:block;
+    width: 100%;
+    max-width:400px;
+    border: 0px;
+    padding: 20px;
+    border: 1px solid rgb(250, 250, 250, 0.1);
+}
+
+.calculator .field div span{
+    display:block;
+    margin-top: 5px;
+    color: #daa106;
+}
+

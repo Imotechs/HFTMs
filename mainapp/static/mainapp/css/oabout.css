@@ -1,0 +1,250 @@
+#hero{
+    position: relative;
+}
+
+.hero-other{
+    background-image: url(../img/image1.png);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    height: 300px;
+    position: relative;
+    padding: 50px;
+}
+
+.hero-other .container p{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero-other .container p *{
+    color: white;
+}
+
+.about{
+    position: relative;
+}
+
+.under-about{
+    background:  #c5cea3;
+    position: absolute;
+    padding: 20px;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 150px;
+    z-index: -1;
+}
+
+.about .container{
+    width: 100vw;
+    max-width: 1250px;
+    margin: auto;
+    padding: 50px 0px 30px 0px;
+    text-align: center;
+}
+
+.about .container img{
+    width: 95%;
+    max-width: 650px;
+}
+
+.about .container p{
+    width: 95%;
+    max-width: 700px;
+    margin:20px auto;
+}
+
+#about p{
+    font-size: .9em;
+}
+
+.about-other{
+    padding: 50px 0px;
+    line-height: 1.5;
+}
+
+.about-other .container{
+    width: 100%;
+    max-width: 1250px;
+    margin: auto;
+    display: flex;
+}
+
+.about-other .left{
+    flex: 7;
+    margin-right: 20px;
+}
+
+.about-other .left h2{
+    margin: 20px 0px;
+}
+
+.about-other .left img{
+    width: 100%;
+}
+
+.about-other .left p{
+    margin: 20px 0px;
+}
+
+.about-other .right{
+    flex: 3;
+    margin-left: 20px;
+    background: #daa106;
+    color: white;
+    height: max-content;
+}
+
+.about-other .right p{
+    margin: 20px 35px;
+}
+
+.about-other .right h2{
+    margin: 20px 35px;
+}
+
+
+.mission{
+    line-height: 1.5;
+}
+
+.mission .container{
+    display: flex;
+    width: 100vw;
+    max-width: 1250px;
+    margin: 20px auto;
+}
+
+.mission h2{
+    margin: 10px 0px;
+}
+
+.mission .container img{
+    flex: 2;
+    margin-right: 50px;
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+}
+
+.mission-other{
+    line-height: 1.5;
+}
+
+.mission-other .container{
+    display: flex;
+    width: 100vw;
+    max-width: 1250px;
+    margin: 20px auto;
+}
+
+.mission-other h2{
+    margin: 10px 0px;
+}
+
+.mission-other .container img{
+    flex: 2;
+    margin-left: 50px;
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+}
+
+.mission-other .container .left{
+    text-align: right;
+}
+
+.cert img{
+    width: 95%;
+    max-width: 650px;
+    display: block;
+    margin: 40px auto 20px auto;
+    border: 3px solid #daa106;
+}
+
+
+
+
+@media only screen and (max-width:1000px){
+    
+    .about-other .left{
+        flex: 5;
+        margin-right: 10px;
+    }
+    
+    .about-other .right{
+        flex: 5;
+        margin-left: 10px;
+    }
+}
+
+
+@media only screen and (max-width:700px){
+    
+    .about-other{
+        padding: 0px 0px 20px 0px;
+    }
+    
+    .about-other .container{
+        flex-direction: column;
+        width: 100vw;
+    }
+    
+     .about-other .left{
+        margin: 0px;
+    }
+    
+    .about-other .right{
+        margin: 0px;
+    }
+    
+    .about-other .left p{
+        font-size: .9em;
+    }
+    
+    .about-other .left h2{
+        margin: 10px 0px 0px 0px;
+    }
+    
+    .about-other .right p{
+        margin: 10px 20px;
+    }
+    
+    
+    .mission .container{
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .mission .container img{
+        margin-right: 0px;
+        max-width: 100%;
+        height: 250px;
+    }
+    
+    .mission-other .container{
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .mission-other .container .left{
+        text-align: center;
+    }
+    
+    .mission-other .container img{
+        margin-left: 0px;
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width:450px){
+
+    .hero-other{
+        height: 200px;
+    }
+}

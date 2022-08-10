@@ -1,0 +1,55 @@
+{%extends 'mainapp/base.html'%}
+{%load static%}
+{%block content%}
+<link rel="stylesheet" href="{%static 'mainapp/css/other.css'%}">
+  
+    <main>
+    
+    <!-------------- Hero Section --------->
+    
+    <div class="hero-other">
+            <div class="container">
+                <p><i class="fa fa-home"></i> <a href="{%url 'home'%}">Home</a> <span> | </span> <span>Testimonial</span></p>
+            </div>
+    </div>
+    
+     <!--------------  Testimony ------->
+        
+     <div class="news">
+        <div class="container">
+        
+            <div class="box" style="text-align:center;">
+                <img src="{%static 'mainapp/img/testimonial4.jpg'%}">
+                <p>If you are looking for a mining company to mine your bitcoin. Look no further, this is the best, with a reliable investment system.</p>
+                <b><span style="text-transform: capitalize">Diego Sebastián</span></b>
+            </div>
+            
+        
+            <div class="box" style="text-align:center;">
+                <img src="{%static 'mainapp/img/testimonial1.jpg'%}">
+                <p>HFTM has liberated me from so many financial instabilities, I can't count how much i have been able to change from what i get mining here.</p>
+                <b><span style="text-transform: capitalize">Prcillia Santiago</span></b>
+            </div>
+            
+        
+            <div class="box" style="text-align:center;">
+                <img src="{%static 'mainapp/img/testimonial3.webp'%}">
+                <p>Its good to see that they are an honest bitcoin Mining service which shows their farms openly to the public.
+                    Everything is fine for me. Good service, timely payments, 
+                    technical support chat always answers. I will give 5 star. </p>
+                <b><span style="text-transform: capitalize">Mateo Nicolás</span></b>
+            </div>
+
+            <div class="box" style="text-align:center;">
+                <img src="{%static 'mainapp/img/testimonial2.jpg'%}">
+                <p>Everything works perfectly. The company really pays. Good service.</p>
+                <b><span style="text-transform: capitalize">Charlotte Benjamin</span></b>
+            </div>
+            
+        </div>
+    </div>
+    </div>
+        
+    </main>
+    
+   {%endblock content%}

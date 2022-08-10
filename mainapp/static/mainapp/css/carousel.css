@@ -1,0 +1,254 @@
+.partners, .testimony{
+    position: relative;
+    background-color: white;
+    padding-top: 20px;
+    font-family: 'Roboto condensed';
+}
+
+.carousel-container{
+    width: 84%;
+    height: 200px;
+    margin: 20px auto;
+    overflow: hidden;
+    padding: 10px 0px 10px 0px;
+}
+
+.carousel-box{
+    background: white;
+    display: inline-block;
+    width: 200px;
+    height: 140px;
+    margin: 20px 10px; 
+    border-radius: 5px;
+}
+
+.carousel-box a{   
+    display: block;
+    color: black;
+    z-index: 88;
+    font-family: 'lora', 'dosis';
+    font-size: 26px;
+    font-weight: bold;
+    max-width: max-content;
+    margin: auto;
+}
+
+.carousel-box img{
+    height:100px;
+    width:150px;
+}
+
+.carousel-head{
+    text-align: center;
+    margin: 10px auto;
+    padding: 15px;
+    color: #012038;
+}
+
+
+.testimony .next{
+    position: absolute;
+    top: 48.5%;
+    right: 40px;
+    font-size: 2em;
+    color: #012038;
+    cursor: pointer;
+    z-index: 88;
+}
+
+.testimony .prev{
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    font-size: 2em;
+    color: #012038;
+    cursor: pointer;
+    z-index: 88;
+}
+
+.testimony h1{
+    color: black;
+    position: relative;
+    width: max-content;
+    margin: 10px auto;
+    padding-bottom: 30px;
+}
+
+.testimony h1::after{
+    content: "";
+    width: 60px;
+    position: absolute;
+    height: 4px;
+    background: #c19740;
+    bottom: 0px;
+    left: 35%;
+}
+
+.testimony .container{
+    height: 300px;
+    margin: 20px auto;
+    overflow: hidden;
+    padding: 10px 0px 10px 0px;
+    text-align: center;
+    width: 95%;
+    max-width: 420px;
+    display: block;
+}
+
+.testimony .container .box{
+    margin: auto;
+    background: white;
+    display: inline-block;
+    height: 140px;
+    margin: 20px 10px; 
+    border-radius: 5px;
+}
+
+.testimony .container .box div{
+    color: rgb(0, 0, 0, 0.5);
+    line-height: 1.5;
+}
+
+.testimony .container .box h2{
+    font-weight: normal;
+    font-size: 1.2em;
+    text-transform: capitalize;
+}
+
+
+.testimony .container .box small{
+    color: #c19740;
+    text-transform: capitalize;
+}
+
+.testimony .next{
+    right: 100px;
+}
+
+.testimony .prev{
+    left: 100px;
+}
+
+
+.morenews{
+    display: block;
+}
+
+.morenews h1{
+    padding: 0px 10px;
+    text-align: center;
+}
+
+.morenews .container {
+    margin: 10px auto;
+    padding: 0px 10px;
+}
+
+.morenews .container .box{
+    height: 370px;
+    margin: 30px auto;
+    text-align: left;
+    max-width: 500px;
+}
+
+.morenews .container .box .post{
+    padding: 0px 10px;
+}
+
+.morenews .container .box h2{
+    display: block;
+    color: #c19740;
+    font-size: 1em;
+    margin-bottom: 0px;
+    font-weight: 500;
+}
+
+.morenews .container .box p{
+    font-size: .9em;
+    margin: 0px;
+}
+
+.morenews .container .box small{
+    font-size: .7em;
+    margin-right: 10px;
+}
+
+.morenews .container .box img{
+    display: block;
+    width: 100%;
+    height: 200px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.morenews .container .box .read{
+    display: block;
+    background-color: #c19740;
+    padding: 8px 15px;
+    color: white;
+    width: max-content;
+    border-radius: 3px;
+    font-size: .8em;
+    margin-top: 10px;
+} 
+
+
+@media only screen and (max-width:800px){
+    
+    .testimony .next{
+        right: 30px;
+    }
+
+    .testimony .prev{
+        left: 30px;
+    }
+}
+
+@media only screen and (max-width:600px){
+
+    .carousel-box{
+        width: 150px;
+    }
+    .next{
+        right:7px;
+        padding: 5px;
+    }
+    
+    .prev{
+        left: 11px;
+    }
+    
+    .carousel{
+        padding-top: 0px;
+    }
+    
+    .carousel-container{
+        height: 150px;
+    }
+    
+    
+}
+
+@media only screen and (max-width:550px){
+    
+    .testimony .next{
+        right: 10px;
+        font-size: 1.5em;
+        top: 55%;
+    }
+
+    .testimony .prev{
+        left: 10px;
+        font-size: 1.5em;
+        top: 57%;
+    }
+    
+    .testimony .container{
+        max-width: 350px;
+        margin-top: 0px;
+    }
+    
+    .testimony h1{
+        font-size: 1.3em;
+    }
+}

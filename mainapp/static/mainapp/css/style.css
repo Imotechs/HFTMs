@@ -1,0 +1,481 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&amp;display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.search-form{
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 100px;
+  z-index: 8;
+  transform: scale(1, 0);
+  transform-origin: top;
+}
+
+.show-search{
+  transform: scale(1, 1);
+}
+
+.search-form input{
+  width: 100%;
+  display: block;
+  padding: 15px;
+  border: 1px solid rgb(0, 0, 0, 0.2);
+}
+
+.fade-left[data-scroll="in"]{
+  animation-name:fadeInLeft;
+  animation-duration:2s;
+  animation-iteration-count: 1;
+}
+
+.fade-right[data-scroll="in"]{
+  animation-name:fadeInRight;
+  animation-duration:2s;
+  animation-iteration-count:1;
+}
+
+* a:hover{
+    text-decoration: none;
+}
+
+button, select, input, input:focus, input:hover, input:active {
+  outline: none;
+  box-shadow:none;  
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+textarea,
+select,
+input{
+     -webkit-appearance: none;
+     border-radius: 0;
+}
+
+body {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+#preloader {
+  position: absolute;
+  display: none;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  margin: -30px 0 0 -30px;
+}
+#status {
+  position: fixed;
+  z-index: 999999;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  background: #fff;
+  background-image: none;
+  background-image: url("../img/logo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+  animation: zoomin;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes zoomin {
+  0% {background-size: 50%;}
+  50% {background-size: 85%;}
+  100% {background-size: 50%;}
+}
+
+#status span{
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+header {
+    width: 100%;
+    height: max-content;
+    transition: 0.5s;
+    z-index: 50;
+    background-color: transparent;
+    position: absolute;
+  }
+  header nav {
+    position: relative;
+    float: right;
+    margin-top: 30px;
+    right: 10%;
+    transition: 0.1s;
+    padding: 30px 0px 30px 0px;
+  }
+  header nav ul{
+    height:100%;
+  }
+  header.sticky {
+    background-color: #0b0c26;
+    box-shadow: 10px 0px 5px 5px rgb(0, 0, 0, 0.04);
+  
+  }
+  header.sticky nav {
+    padding: 5px 0px 5px 0px;
+    height: 70px;
+    padding: 0;
+  }
+  header.sticky nav ul li {
+    color: #fff;
+  }
+  header nav ul li.nav-item:hover .dropdown {
+    opacity: 1;
+    margin-top:37px;
+    height: max-content;
+    transition: 0.5s;
+  }
+  header nav ul li.nav-item:hover .dropdown li {
+    display:block;
+  }
+  
+  header nav ul li {
+    padding: 10px 20px 10px 20px;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.4s;
+    border-bottom: 1px solid transparent;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 14px;
+    outline: medium none;
+    height:100%;
+    letter-spacing: 0px;
+    position: relative;
+  }
+  header nav ul a {
+    text-decoration: none;
+    color: inherit;
+  }
+  .dropdown {
+  opacity : 0;
+  background-color: #f8f9fa;
+  width:250px;
+  position: absolute;
+  margin-top:10%;
+  transition: opacity 0.5s, visibility 0.5s , margin 0.5s;
+  border-top:2px solid #205aac;
+  box-shadow:0 6px 12px rgba(0, 0, 0, .175);
+  z-index:10;
+  height:0;
+  visibility:visible;
+  overflow:hidden;
+  
+    
+  }
+  .dropdown li{
+    width: 100%;
+    display: none;
+    background-color: inherit;
+    padding-left:10px;
+  
+    transition: 0.5s;
+  
+  }
+  .dropdown li i{
+    display:inline;
+    opacity:0;
+    transition: 0.5s;
+  }
+  .dropdown li:hover{
+    background-color: white;
+    display:flex;
+    padding-left:15px;
+  }
+  .dropdown li:hover i{
+    opacity:1;
+  }
+  
+  .dropdown a {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    color: #0b0c26;
+    cursor: pointer;
+  
+    text-decoration: none;
+  
+    transition: 0.4s;
+    border-bottom: 1px solid rgb(0, 0, 0, 0.02);
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    width: 100%;
+    display: inline;
+    margin-left:5px;
+    font-size: 13px;
+    outline: medium none;
+    letter-spacing: 0px;
+    text-transform: capitalize;
+    text-align: left;
+    position: relative;
+  }
+  
+  header nav ul li i.fa{
+    display: none;
+    position: absolute;
+  }
+  header nav ul li:hover,header nav ul li.active{
+    color: #205aac;
+  }
+  
+  header #logo {
+    width: 180px;
+    height: 50px;
+    display: inline-block;
+    margin-left: 20px;
+    margin-top: 10px;
+    position: relative;
+    left: 10%;
+  }
+  header #logo img {
+    width: 100%;
+    height: 100%;
+  }
+  .search-btn {
+    border: 0.2px solid #fff;
+    border-radius: 100px;
+    padding: 8px;
+    color: #fff;
+    display: none;
+    transition: 0.4s;
+  }
+  .search-btn:hover {
+    color: #0b0c26;
+    background-color: #fff;
+  }
+  .inline-search {
+    display: inline;
+  }
+  
+  .login {
+    border: 0.5px solid #0b0c26;
+    color: #fff;
+    font-size: 12px;
+    width: 100%;
+    padding: 10px;
+    transition: 0.4s;
+  }
+  .login:hover {
+    color: #0b0c26;
+    background-color: #fff;
+  }
+  @media screen and (max-width: 1200px) {
+
+    .search-form{
+      top: 75px;
+    }
+
+    header.sticky{
+      position:relative;
+    }
+    header nav {
+      width: 90%;
+      height: 300px;
+      background-color: white;
+      position: fixed;
+      margin: auto;
+      margin-top: 0px;
+      border-top: 3px solid #205aac;
+      left: 50%;
+      margin-left: -45%;
+      transition: 0.5s;
+      height: 100%;
+      box-shadow: rgba(0, 0, 0, 0.12) 3px 3px 15px;
+      display: none;
+      z-index: 500;
+    }
+
+    header nav ul{
+      height: max-content;
+    }
+
+    header.sticky nav {
+      height: max-content;
+      box-shadow: rgba(0, 0, 0, 0.12) 3px 3px 15px;
+      position: absolute;
+      z-index: 500;
+    }
+  
+    header #logo {
+      width: 180px;
+      height: 65px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      left: 25%;
+      margin-left: 10px;
+    }
+
+    header nav ul li i.fa{
+      right: 10px;
+      font-size: 20px;
+      display: block;
+      top: 5px;
+    }
+  
+    .search-btn {
+      position: absolute;
+      left: 5%;
+      display: block;
+      top: 20px;
+    }
+    .inline-search {
+      display: none;
+    }
+  
+    header nav ul li {
+      display: block;
+      margin: auto;
+      width: 100%;
+      margin-top: 4px;
+      color: black;
+      border-bottom: 0.5px solid rgb(0, 0, 0, 0.04);
+      width: 100%;
+      padding-left:0;
+      width:92%;
+    }
+    .dropdown {
+      opacity: 1;
+      position: static;
+      height: 0;
+      box-shadow:none;
+      background-color: white;
+      transition: none;
+      width: 100%;
+      border:none;
+      overflow: hidden;
+      margin:0;
+    
+    
+  }
+  header nav ul li span{
+  display:inline;
+  position:static;
+  margin-left:0;
+  
+  
+  }
+    header nav ul li:hover .dropdown {
+      opacity: 1;
+      border:none;
+      height: max-content;
+    }
+    .login{
+      display: none;
+    }
+  
+    .expand {
+      display: block;
+    }
+  }
+  
+
+  @media screen and (max-width: 500px) {
+    header #logo {
+      width: 85px;
+      margin: 0px 10px 0px -10px;
+      height: 95px;
+      padding-bottom: 25px;
+    }
+
+    header #logo img {
+      width: 100%;
+      height: 80%;
+      margin-top: 5px;
+    }
+
+    .search-form{
+      top: 65px;
+    }
+
+    .search-btn {
+      top: 15px;
+    }
+  }
+
+
+
+
+  #toggle-sidebar{
+    width:30px;
+    height:80px;
+    color: black;
+    position:absolute;
+    right:10%;
+    top:-5px;
+    display:none;
+    z-index:1000;
+    margin-top:25px;
+    
+  }
+    
+    
+  #toggle-sidebar div{
+    width:100%;
+    margin:6px;
+    background-color:#fff;
+    color: #fff;
+    transition:0.3s;
+    height:1.5%;
+
+  }
+    
+  #toggle-sidebar.closed div{
+    transition:0.3s;
+    background-color: black;
+    color: black;
+    position: absolute;
+  }
+    
+  #toggle-sidebar.closed div:nth-of-type(1){
+  transform: rotate(45deg);
+
+  }
+    
+  #toggle-sidebar.closed div:nth-of-type(2){
+    width:50%;
+
+    opacity: 0;
+    transition: none;
+  }
+  #toggle-sidebar.closed div:nth-of-type(3){
+
+    transform: rotate(-45deg);
+    position: absolute;
+
+  }
+
+  @media screen and (max-width:1200px){
+    #toggle-sidebar{
+      
+      display:block;
+    }
+
+    li.nav-item.active {
+      color: black;
+    }
+    li.nav-item a {
+      color: black;
+    }
+  }
+  @media screen and (min-width : 1200px){
+    li.nav-item.active {
+      color: white;
+    }
+  }
+
+

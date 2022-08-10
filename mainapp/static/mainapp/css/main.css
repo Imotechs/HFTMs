@@ -1,0 +1,457 @@
+
+.about-image[data-scroll="in"]{
+    animation-name:fadeInLeft;
+    animation-duration:2s;
+    animation-iteration-count: 1;
+}
+
+.about-content[data-scroll="in"]{
+    animation-name:fadeInRight;
+    animation-duration:2s;
+    animation-iteration-count:1;
+}
+
+.about{
+    padding: 60px 10px 70px 10px;
+    background: #f8f8f8;
+    text-align: justify;
+}
+
+.about .container{
+    display: flex;
+    max-width: 1100px;
+    margin: auto
+}
+
+.about .container .left{
+    flex: 1;
+    background: #205AAC;
+    color: white;
+    padding: 20px 40px;
+    line-height: 2;
+    font-family: 'Roboto Condensed';
+}
+
+.about .container .left h2{
+    font-weight: normal;
+    line-height: 1.2;
+    text-align: left;
+}
+
+.about .container .left p{
+    margin: 20px 0px 20px 0px;
+}
+
+.about .container .left i{
+    display: block;
+    margin: 120px 0px 0px 0px;
+}
+
+.about .container .right{
+    flex: 1;
+    background-image: url(../img/hero_2.html);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.note{
+    padding: 10px 0px;
+}
+
+.note .container{
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+}
+
+.note .container h3{
+    color: #205AAC;
+    font-weight: normal;
+    font-size: 1.3em;
+}
+
+.note .container p{
+    font-size: .9em;
+}
+
+.flex{
+    padding: 10px 0px;
+}
+
+.flex .container{
+    display: flex;
+    max-width: 1200px;
+    margin: auto;
+    padding: 60px 0px;
+    border-bottom: 1px solid rgb(0, 0, 0, 0.1)
+}
+
+.flex .container .box{
+    flex: 1;
+    text-align: center;
+}
+
+.flex .container .box img{
+    width: 40px;
+    display: block;
+    margin: auto
+}
+
+.flex .container .box h3{
+    font-weight: 500;
+    font-size: 1.2em;
+}
+
+.flex .container .box p{
+    color: rgb(0, 0, 0, 0.7);
+    font-size: .9em;
+}
+
+.about.offer{
+    background: white;
+}
+
+.about.offer .container .left{
+    background-color: white;
+    color: black;
+}
+
+.about.offer .container a{
+    background: #205AAC;
+    display: block;
+    padding: 10px 30px;
+    border-radius: 5px;
+    color: white;
+    width: max-content;
+}
+
+.about.offer .container .right{
+    background-image: url(../img/about.jpg);
+    border-radius: 5px;
+    min-height: 300px;
+}
+
+.about.about-main{
+    background: white;
+}
+
+.about.about-main .container .left{
+    background: white;
+    color: black;
+    order: 1;
+}
+
+.about.about-main .container .left h2{
+    margin: 0px;
+}
+
+.about.about-main .container .left p{
+    margin: 0px;
+}
+
+.about.about-main .container .right{
+    background-image: none;
+    min-height: inherit;
+}
+
+.flex_2{
+    padding: 30px 0px;
+    background-image: url(../img/genimage1.png);
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+    position: relative;
+    box-shadow: 0 0 0 1000px rgb(4, 4, 39, 0.8) inset;
+    color: white;
+    position: relative;
+}
+
+.flex_2 .container{
+    display: flex;
+    max-width: 1250px;
+    margin: auto;
+    padding: 10px;
+}
+
+.flex_2 .container .box{
+    flex: 1;
+    margin: 10px;
+    border: 2px dashed rgb(250, 250, 250, 0.3);
+    padding: 20px;
+    text-align: center;
+    max-width: 400px;
+}
+
+.flex_2 .container .box:hover{
+    border: 2px dashed rgb(250, 250, 250, 0.9);
+}
+
+.flex_2 .container .box p{
+    color: white;
+}
+
+.flex.service h1{
+    max-width: 300px;
+    margin: auto;
+}
+
+.flex.service .container{
+    justify-content: center;
+    padding: 10px 10px;
+    border: 0px;
+}
+
+.flex.service .container .box{
+    min-height: 500px;
+    padding: 15px;
+    box-shadow: 0px 2px 20px 5px #d6dee0;
+    border-radius: 10px;
+    text-align: justify;
+    margin: 10px;
+    max-width: 400px;
+}
+
+.flex.service .container .box h3{
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1em;
+    margin: 5px 0px;
+}
+
+.flex.service .container .box img{
+    width: 100%;
+    min-height: 230px
+}
+
+
+.flex.counter{
+    background-image: url(../img/counter.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 0px;
+}
+
+.flex.counter .container{
+    background: rgba(0, 0, 0, 0.9);
+    max-width: 100%;
+}
+
+.flex.counter .container .box p{
+    color: white;
+    letter-spacing: 2px;
+}
+
+.flex.news{
+    font-family: 'Roboto condensed';
+    position: relative;
+}
+
+.flex.news h1{
+    margin: 0px;
+    max-width: 1150px;
+    margin: auto;
+    padding: 0px 10px;
+    text-align: center;
+}
+
+.flex.news .container{
+    padding: 10px 10px 10px 10px;
+    border: 0px;
+}
+
+.flex.news .container .box .post{
+    float: left;
+    width: 60%; 
+}
+
+.flex.news .container .box img{
+    float: right;
+    width: 35%;
+    margin: 15px 0px 0px 0px;
+    border-radius: 5px;
+    height: 100px;
+}
+
+.flex.news .container .box{
+    border: 1px solid  rgb(0, 0, 0, 0.4);
+    margin: 10px;
+    border-radius: 10px;
+    padding: 10px 15px 20px 15px;
+    text-align: left;
+    max-width: 400px;
+}
+
+.flex.news .container .box h2{
+    font-size: 1em;
+}
+
+.flex.news .container .box p{
+    font-size: .9em;
+}
+
+.flex.news .container .box p:last-child{
+    margin: 5px 0px
+}
+
+.flex.news .container .box span{
+    font-size: .7em;
+    text-transform: capitalize;
+}
+
+.flex.news .btn{
+    animation: headShake;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    background-color: #205AAC;
+    color: white;
+    display: block;
+    width: max-content;
+    padding: 8px 25px;
+    font-size: .8em;
+    border-radius: 3px;
+    margin: auto;
+}
+
+.single .container{
+    width: 95%;
+    max-width: 900px;
+    margin: auto;
+    text-align: left;
+    padding-top: 80px;
+}
+
+.single .container img{
+    width: 100%;
+    height: 400px;
+}
+
+.single .container p:last-of-type{
+    text-align: justify;
+    line-height: 1.5;
+}
+
+.single .container p i{
+    text-transform: capitalize;
+}
+
+.single .container h1, .single .container h1{
+    font-size: 1.5em;
+}
+
+@media only screen and (max-width: 780px){
+    
+    .about .container{
+        flex-direction: column;
+    }
+    
+    .about{
+        padding: 10px 10px 20px 10px;
+        background: #f8f8f8;
+    }
+    
+    .about .container .left{
+        padding: 20px 20px;
+    }
+
+    .note .container h3{
+        font-size: 1.1em;
+    }
+
+    .note .container p{
+        font-size: .8em;
+        margin-bottom: 0px;
+    }
+
+    .flex_2 .container{
+        flex-direction: column;
+    }
+    
+    .flex_2 .container .box{
+        margin: 10px auto;
+    }
+    
+    .flex_2 h1, .flex_2 h3{
+        font-size: 1.2em;
+    }
+    
+    .flex .container{
+        flex-direction: column;
+    }
+    
+    .flex .container .box{
+        max-width: 300px;
+        margin: 10px auto;
+    }
+    
+    .flex.service .container .box{
+        margin: 10px auto;
+    }
+    
+    .flex.news .container .box{
+        margin: 10px auto;
+    }
+}
+
+
+@media only screen and (max-width:450px){
+    
+    .about .container .left h2{
+        font-size: 1.3em;
+        line-height: 1.5;
+        margin: 0px;
+    }
+
+    .about .container{
+        padding: 0px;
+    }
+
+    .about .container .left{
+        padding: 10px;
+    }
+    
+    .about.offer .container a{
+        margin: 10px 0px;
+        font-size: .9em;
+        padding:8px 15px;
+    }
+
+    .flex .container{
+        padding: 30px 0px;
+    }
+
+    .flex.service h1{
+        font-size: 1.5em;
+    }
+
+    .flex.service h2{
+        font-size: 1.6em;
+    }
+
+    .single .container{
+        padding-top: 0px;
+    }
+
+    .single .container img{
+        height: 200px;
+    }
+    
+    .single .container p{
+        font-size: 12px;
+    }
+
+    .single .container li{
+        font-size: 12px;
+    }
+
+    .single .container h2{
+        font-size: 1em;
+    }
+
+    .single .container h1{
+        font-size: 1em;
+    }
+}

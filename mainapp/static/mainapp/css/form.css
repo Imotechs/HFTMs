@@ -1,0 +1,204 @@
+a{
+    color: white;
+}
+
+
+.form * {
+    color: #00539f;
+}
+
+.alert{
+    height: inherit;
+    border-radius: 5px;
+    padding: 0px;
+    margin: 20px 0px 10px 0px;
+    font-size: .8em;
+    line-height: 1.5;
+}
+
+.alert-danger *{
+    color: red;
+}
+
+.form{
+    width: 100%;
+    font-family: sans-serif;
+    padding: 0px;
+    box-sizing: border-box;
+    display: flex;
+    margin: 20px 0px;
+}
+
+.form label * {
+    color: red;
+}
+.form label{
+    display: block;
+    padding: 0px 0px 0px 15px;
+    font-size: .8em;
+}
+
+.form li {
+    list-style: none;
+    margin-top: 5px;
+}
+
+*:focus{
+    outline: none;
+}
+
+.form .container{
+    padding: 0px 0px 20px 0px;
+    margin: auto;
+    background: white;
+    flex: 1;
+    margin: 20px;
+}
+
+.form .container form{
+    max-width: 420px;
+    margin: auto;
+}
+
+.form .container input, .form .container select{
+    display: block;
+    width: 100%;
+    margin: 12px auto;
+    padding: 13px 10px 10px 35px;
+    font-size: 15px;
+    border: 1px solid rgb(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    color: #00539f;
+    font-size: .9em;
+}
+
+.form .btn{
+    display: block;
+    width: 100%;
+    margin: 30px auto 20px auto;
+    padding: 13px;
+    font-size: .9em;
+    transition: 500ms;
+    color: #00539f;
+    background-color:white;
+    border: 1px solid rgb(0, 0, 0, 0.3);
+    font-weight: normal;
+}
+
+.form .container .checkbox{
+    padding: 0px;
+}
+
+.form .container input[type="checkbox"]{
+    width: 15px;
+    color: black;
+    display: inline-block;
+    height: 15px;
+    padding: 5px;
+}
+
+input[type=checkbox]{
+    -webkit-appearance: none;
+    outline: none;
+    height: 20px;
+    width: 20px;
+    border: 1px solid black;
+    color: black;
+    display: inline-block;
+    position: relative;
+}
+
+input[type=checkbox]:checked:after {
+    content: '✓';    /* or '\2713', or '\2714' */
+    text-align: center;
+    vertical-align: middle;
+    position: absolute;
+    height: 1em;
+    width: 1em;
+    line-height: 1;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+input[type=checkbox]:checked:after {
+    content: '';
+    position: absolute;
+    height: 60%;
+    width: 30%;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    -webkit-transform: translateY(-22%) rotate(45deg);
+    transform: translateY(-22%) rotate(45deg);
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.form .container .checkbox label{
+    display: inline-block;
+    color: black;
+    line-height: 1.5;
+}
+  
+.form .container span{
+    display: block;
+    font-size: .8em;
+    color: black;
+}
+
+.form .container a{
+    color: #00539f;
+}
+
+.form .btn:hover{
+    color: white;
+    border: 1px solid white;
+    background: #00539f;
+}
+
+.form .container div{
+    position: relative;
+}
+
+.form .container h4{
+    color: rgba(0, 0,0, 0.5);
+}
+
+.form .container i{
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    color: gray;
+}
+
+.form .container p{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.form .right{
+    background-image: url(register.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    flex: 1;
+    margin: 20px;
+    min-height: 300px;
+    display: none;
+}
+
+@media only screen and (max-width:650px){
+    
+    .form {
+        flex-direction: column;
+    }
+    
+    .form .right{
+        margin-top: 0px;
+    }
+}

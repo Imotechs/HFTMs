@@ -1,0 +1,213 @@
+<{%extends 'base2.html'%}
+{%load static%}
+
+{%block content%}      <!-- ============================================================== -->
+        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <div class="page-breadcrumb">
+                <div class="row">
+                    <div class="col-5 align-self-center">
+                        <h4 class="page-title">Transaction List</h4>
+                        <div class="d-flex align-items-center">
+
+                        </div>
+                    </div>
+                    <div class="col-7 align-self-center">
+                        <div class="d-flex no-block justify-content-end align-items-center">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item">
+                                        <a href="#">Home</a>
+                                    </li>
+                                    <li class="breadcrumb-item active" aria-current="page">Approved</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+                <!-- ============================================================== -->
+                <!-- Start Page Content -->
+                <!-- ============================================================== -->
+                <!-- basic table -->
+                {%if p_withdraws%}
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Pending Transactions</h4>
+                                
+                                <div class="table-responsive">
+                                    <table id="zero_config" class="table table-striped table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>Status</th>
+                                                <th>Title</th>
+                                                <th>date placed</th>
+                                                <th>Amount</th>
+                                                
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                {%for withdraw in p_withdraws%}
+                                                <tr>
+
+                                                <td><span class="label label-warning">Pending</span></td>
+                                                <td>Withdrawal</td>
+                                               <td>{{withdraw.date_placed|date:'M,D,Y'}}</td>
+                                                <td>${{withdraw.amount}}</td>
+                                            
+                                            </tr>
+                                            {%endfor%}
+    
+                                     
+                                            
+                                        </tbody>
+                                    </table>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {%endif%}
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Approved Transactions</h4>
+                                
+                                <div class="table-responsive">
+                                    <table id="zero_config" class="table table-striped table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>Status</th>
+                                                <th>Title</th>
+                                                <th>date placed</th>
+                                                <th>date approved</th>
+                                                <th>Amount</th>
+                                                
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                {%for withdraw in withdraws%}
+                                                
+                                                <tr>
+                                                    {%if withdraw.approved%}
+                                                <td><span class="label label-success">Approved</span></td>
+
+                                                {%else%}
+                                                <td><span class="label label-warning">Pending</span></td>
+
+                                                {%endif%}
+                                                <td>Withdrawal</td>
+                                               <td>{{withdraw.date_placed|date:'M,D,Y'}}</td>
+                                                <td>{{withdraw.date_approved|date:'M,D,Y'}}</td>
+                                                <td>${{withdraw.amount}}</td>
+                                            </tr>
+                                                {%endfor%}
+
+                                            <!-- <tr>
+                                                <td><span class="label label-success">Approved</span></td>
+                                                <td>Admin-Pro Theme Side Menu Open OnClick</td>
+                                                <td>1020345</td>
+                                                <td>Admin-Pro</td>
+                                                <td>Vishal Bhatt</td>
+                                                <td>2022/08/01</td>
+                                                <td>John</td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="label label-success">Approved</span></td>
+                                                <td>Admin-Pro Theme Side Menu Open OnClick</td>
+                                                <td>1020345</td>
+                                                <td>Admin-Pro</td>
+                                                <td>Vishal Bhatt</td>
+                                                <td>2022/08/01</td>
+                                                <td>John</td>
+                                            </tr> -->
+                                            
+                                        </tbody>
+                                    </table>
+                                    <!-- <ul class="pagination float-right">
+                                        <li class="page-item disabled">
+                                            <a class="page-link" href="#" tabindex="-1">Previous</a>
+                                        </li>
+                                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#">Next</a>
+                                        </li> -->
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {%if c_withdraws%}
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Cancelled Transactions</h4>
+                            
+                            <div class="table-responsive">
+                                <table id="zero_config" class="table table-striped table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Status</th>
+                                            <th>Title</th>
+                                            <th>date placed</th>
+                                            <th>Amount</th>
+                                            
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                            {%for withdraw in c_withdraws%}
+                                            <tr>
+
+                                            {%if withdraw.approved%}
+                                            <td><span class="label label-success">Approved</span></td>
+
+                                            {%else%}
+                                            <td><span class="label label-danger">Cancel</span></td>
+
+                                            {%endif%}
+                                            <td>Withdrawal</td>
+                                           <td>{{withdraw.date_placed|date:'M,D,Y'}}</td>
+                                            <td>${{withdraw.amount}}</td>
+                                        </tr>
+
+                                            {%endfor%}
+
+                                 
+                                        
+                                    </tbody>
+                                </table>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {%endif%}
+    {%endblock content%}

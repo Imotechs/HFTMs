@@ -1,0 +1,47 @@
+{%extends 'mainapp/base.html'%}
+{%load static%}
+{%block content%}
+    <main>
+        <link rel="stylesheet" href="{%static 'mainapp/css/other.css'%}">
+
+    <!-------------- Hero Section --------->
+    
+    <div class="hero-other">
+            <div class="container">
+                <p><i class="fa fa-home"></i> <a href="{%url 'home'%}">Home</a> <span> | </span> <span>Recent News</span></p>
+            </div>
+    </div>
+    <!-------------- Blog ------------>
+
+    <div class="news">
+        <div class="container">
+        
+            <div class="box">
+                <img src="{%static 'mainapp/admin/blog/1636023732_profits-1953616_960_720.jpg'%}">
+                <h2><a href="https://coinjournal.net/news/bitcoin-mining-will-lower-retail-electricity-rates-in-the-long-term-expert/">Bitcoin mining will lower retail electricity rates in the long term: Expert</a></h2>
+                <span style="text-transform: capitalize">admin • November 4, 2021.</span>
+            </div>
+            
+        
+            <div class="box">
+                <img src="{%static 'mainapp/admin/blog/1636023518_960x0.jpg'%}">
+                <h2><a href="https://bitcoinmagazine.com/business/canaan-to-launch-us-bitcoin-mining-operations">BITCOIN ASIC MAKER CANAAN TO LAUNCH U.S. MINING OPERATIONS
+                    A Canaan executive detailed the success of its pilot mining operations in Kazakhstan and shared plans to expand its operations to the U.S. in an interview.</a></h2>
+                <span style="text-transform: capitalize">admin • November 4, 2021.</span>
+            </div>
+            
+        
+            <div class="box">
+                <img src="{%static 'mainapp/admin/blog/1636023234_e.jpg'%}">
+                <h2><a href="https://decrypt.co/106267/what-bitcoin-miners-are-doing-survive-bear-market">What Bitcoin Miners Are Doing to Survive the Bear Market</a></h2>
+                <span style="text-transform: capitalize">admin • November 4, 2021.</span>
+            </div>
+            
+        </div>
+    </div>
+        
+        
+    </main>
+    
+    
+    {%endblock content%}
